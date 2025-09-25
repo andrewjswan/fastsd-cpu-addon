@@ -11,6 +11,14 @@ if bashio::config.true 'ui_mode'; then
 else
   bashio::log.blue "  In API Mode"
 fi
+if bashio::config.true 'cache'; then
+  bashio::log.blue "  External cache"
+  export HF_HOME=/share/fastsd-cpu/cache
+fi
+if bashio::config.true 'gpu'; then
+  bashio::log.blue "  GPU as Device"
+  export DEVICE=GPU.0
+fi
 if bashio::config.has_value 'log_level'; then
   export LOG_LEVEL=$(bashio::config 'log_level')
 fi
