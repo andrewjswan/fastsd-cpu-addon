@@ -1,0 +1,42 @@
+---
+name: FastSD CPU
+version: 2025.9.3
+slug: fastsd-cpu
+description: FastSD CPU
+url: https://github.com/andrewjswan/fastsd-cpu-addon/
+
+codenotary: notary@home-assistant.io
+
+arch:
+  - amd64
+  - aarch64
+
+image: ghcr.io/andrewjswan/fastsd-cpu-addon-{arch}
+
+startup: application
+boot: auto
+init: false
+hassio_api: true
+ingress: true
+
+map:
+  - addons:rw
+  - all_addon_configs:rw
+  - config:rw
+  - share:rw
+  - ssl:rw
+
+homeassistant: 2025.1.0
+
+panel_icon: mdi:panorama-variant-outline
+panel_title: FastSD CPU
+
+ports:
+  8000/tcp: 8000
+
+ports_description:
+  8000/tcp: "Web Interface"
+
+schema:
+  ui_mode: bool?
+  log_level: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?
