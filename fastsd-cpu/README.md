@@ -20,10 +20,14 @@
 ## Confururation settings
 
 - `ui_mode`: Run FastSD CPU in Web UI mode or API mode.
+- `cache`: Use external cache in share folder
+- `gpu`: Set GPU as Device
 
 ### Default confururation
 ```
   ui_mode: false    # Optional
+  cache: false      # Optional
+  gpu: false        # Optional
   log_level: DEBUG  # Optional, values: DEBUG|INFO|WARNING|ERROR|CRITICAL
 ```
 

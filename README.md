@@ -23,12 +23,6 @@ Add the repository URL under **Supervisor → Add-on Store** in your Home Assist
 
     https://github.com/andrewjswan/fastsd-cpu-addon/
 
-> [!TIP]
-> **FastSD CPU** API mode documentation available at the **http://homeassistant.local:8000/api/docs**.
-
-> [!TIP]
-> **FastSD CPU** [Documentation](https://github.com/rupeshs/fastsdcpu).
-
 > [!NOTE]
 > **FastSD CPU** add-on based on [FastSD CPU](https://github.com/rupeshs/fastsdcpu).
 
