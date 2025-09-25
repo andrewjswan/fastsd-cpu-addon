@@ -1,0 +1,6 @@
+configuration:
+  ui_mode:
+    name: UI Mode
+    description: Run FastSD CPU in Web UI mode or API mode
+  log_level:
+    name: Log Level
