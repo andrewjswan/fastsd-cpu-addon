@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.10.1 - 2025-10-15
+
+- Add Intel GPU drivers
+
 ## 2025.9.5 - 2025-09-25
 
 - External cache added
