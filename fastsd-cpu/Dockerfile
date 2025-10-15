@@ -2,6 +2,11 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+
+RUN echo "Docker builder running on $BUILDPLATFORM, building for $TARGETPLATFORM"
+
 # Packages
 RUN \
     apt-get update \
@@ -14,10 +19,16 @@ RUN \
 
 RUN \
     apt-get update \
-    && apt-get  install --no-install-recommends -q -y \
-       wget \
-       ocl-icd-libopencl1 \
-       intel-opencl-icd
+    && if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
+       apt-get  install --no-install-recommends -q -y \
+          wget \
+          ocl-icd-libopencl1 \
+          intel-opencl-icd; \
+    else \
+       apt-get  install --no-install-recommends -q -y \
+          wget \
+          ocl-icd-libopencl1; \
+    fi
 
 # Intel GPU compute user-space drivers
 RUN \
@@ -50,8 +61,10 @@ RUN \
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # FastSD CPU
+#RUN \
+#  git clone --depth 1 https://github.com/rupeshs/fastsdcpu /app
 RUN \
-  git clone --depth 1 https://github.com/rupeshs/fastsdcpu /app
+  git clone --depth 1 -b python_3.12 https://github.com/andrewjswan/fastsdcpu.git /app
 
 WORKDIR /app
 
