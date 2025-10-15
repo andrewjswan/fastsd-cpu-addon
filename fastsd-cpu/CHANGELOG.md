@@ -3,6 +3,7 @@
 ## 2025.10.3 - 2025-10-15
 
 - Fix for aarch64
+- Temporay switch to python_3.12 branch in https://github.com/andrewjswan/fastsdcpu/
 
 ## 2025.10.1 - 2025-10-15
 

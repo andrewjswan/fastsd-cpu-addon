@@ -18,17 +18,16 @@ RUN \
        ffmpeg
 
 RUN \
-    if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \ 
-        apt-get update \
-        && apt-get  install --no-install-recommends -q -y \
-           wget \
-           ocl-icd-libopencl1 \
-           intel-opencl-icd \
+    apt-get update \
+    && if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
+       apt-get  install --no-install-recommends -q -y \
+          wget \
+          ocl-icd-libopencl1 \
+          intel-opencl-icd; \
     else \
-        apt-get update \
-        && apt-get  install --no-install-recommends -q -y \
-           wget \
-           ocl-icd-libopencl1 \
+       apt-get  install --no-install-recommends -q -y \
+          wget \
+          ocl-icd-libopencl1; \
     fi
 
 # Intel GPU compute user-space drivers
@@ -62,8 +61,10 @@ RUN \
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # FastSD CPU
+#RUN \
+#  git clone --depth 1 https://github.com/rupeshs/fastsdcpu /app
 RUN \
-  git clone --depth 1 https://github.com/rupeshs/fastsdcpu /app
+  git clone --depth 1 -b python_3.12 https://github.com/andrewjswan/fastsdcpu.git /app
 
 WORKDIR /app
 
