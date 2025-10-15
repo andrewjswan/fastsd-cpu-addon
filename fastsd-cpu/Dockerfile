@@ -2,6 +2,11 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+
+RUN echo "Docker builder running on $BUILDPLATFORM, building for $TARGETPLATFORM"
+
 # Packages
 RUN \
     apt-get update \
@@ -13,11 +18,18 @@ RUN \
        ffmpeg
 
 RUN \
-    apt-get update \
-    && apt-get  install --no-install-recommends -q -y \
-       wget \
-       ocl-icd-libopencl1 \
-       intel-opencl-icd
+    if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \ 
+        apt-get update \
+        && apt-get  install --no-install-recommends -q -y \
+           wget \
+           ocl-icd-libopencl1 \
+           intel-opencl-icd \
+    else \
+        apt-get update \
+        && apt-get  install --no-install-recommends -q -y \
+           wget \
+           ocl-icd-libopencl1 \
+    fi
 
 # Intel GPU compute user-space drivers
 RUN \

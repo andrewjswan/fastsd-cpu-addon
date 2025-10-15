@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.10.3 - 2025-10-15
+
+- Fix for aarch64
+
 ## 2025.10.1 - 2025-10-15
 
 - Add Intel GPU drivers
