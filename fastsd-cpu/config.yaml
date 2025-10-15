@@ -1,8 +1,8 @@
 ---
 name: FastSD CPU
-version: 2025.9.5
+version: 2025.10.1
 slug: fastsd-cpu
-description: FastSD CPU
+description: FastSD CPU is a faster version of Stable Diffusion on CPU
 url: https://github.com/andrewjswan/fastsd-cpu-addon/
 
 codenotary: notary@home-assistant.io

@@ -17,7 +17,7 @@ if bashio::config.true 'cache'; then
 fi
 if bashio::config.true 'gpu'; then
   bashio::log.blue "  GPU as Device"
-  export DEVICE=GPU.0
+  export DEVICE=GPU
 fi
 if bashio::config.has_value 'log_level'; then
   export LOG_LEVEL=$(bashio::config 'log_level')
