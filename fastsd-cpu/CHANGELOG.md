@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026.3.1 - 2026-03-16
+
+Update Intel Compute Runtime
+* oneAPI Level Zero Loader v1.28.2
+* Intel Graphics Compiler v2.28.4
+* Intel Compute Runtime v26.05
+
 ## 2025.11.1 - 2025-11-16
 
 - Remove deprecated `codenotary` fields
