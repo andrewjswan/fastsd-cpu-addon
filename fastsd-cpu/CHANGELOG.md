@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.4.1 - 2026-04-14
+
+- Migrate to HA App system
+
 ## 2026.3.1 - 2026-03-16
 
 Update Intel Compute Runtime

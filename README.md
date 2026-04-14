@@ -1,10 +1,10 @@
 <div align="center">
-<h1>FastSD CPU Add-on</h1>
+<h1>Home Assistant App: FastSD CPU</h1>
 </div>
 
 ## General
 
-[![ha addon_badge](https://img.shields.io/badge/HA-Addon-blue.svg)](https://developers.home-assistant.io/docs/add-ons)
+[![ha app_badge](https://img.shields.io/badge/HA-App-blue.svg)](https://developers.home-assistant.io/docs/add-ons)
 [![FastSD CPU](https://img.shields.io/badge/FastSD-CPU-blue.svg)](https://github.com/andrewjswan/fastsd-cpu-addon/)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/andrewjswan/fastsd-cpu-addon/build.yml?logo=github)](https://github.com/andrewjswan/fastsd-cpu-addon/actions)
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/andrewjswan/fastsd-cpu-addon?include_prereleases)](https://github.com/andrewjswan/fastsd-cpu-addon/blob/master/fastsd-cpu/CHANGELOG.md)
@@ -19,7 +19,7 @@
 
 ## Installation
 
-Add the repository URL under **Supervisor → Add-on Store** in your Home Assistant front-end:
+Add the repository URL under **Supervisor → App Store** in your Home Assistant front-end:
 
     https://github.com/andrewjswan/fastsd-cpu-addon/
 
