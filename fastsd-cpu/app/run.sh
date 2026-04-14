@@ -1,8 +1,8 @@
 #!/usr/bin/with-contenv bashio
 
 # ==============================================================================
-# Home Assistant Fast SD CPU Add-on
-# Displays a simple add-on banner on startup
+# Home Assistant App: Fast SD CPU
+# Displays a simple App banner on startup
 # ==============================================================================
 
 bashio::log.info 'FastSD CPU Starting...'

@@ -1,5 +1,5 @@
 ### Build FastSD CPU
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base:stable
 FROM $BUILD_FROM
 
 ARG TARGETPLATFORM
@@ -89,7 +89,7 @@ LABEL \
     io.hass.name="${BUILD_NAME}" \
     io.hass.description="${BUILD_DESCRIPTION}" \
     io.hass.arch="${BUILD_ARCH}" \
-    io.hass.type="addon" \
+    io.hass.type="app" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Andrew J.Swan <andrewjswan@addons.community>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
